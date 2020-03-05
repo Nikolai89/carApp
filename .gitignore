@@ -1,0 +1,17 @@
+/CarApplication/Scripts
+/CarApplication/bin/*.dll
+*.dll
+/packages/Microsoft.AspNet.Mvc.ru.5.2.7/*.nupkg
+/packages/Microsoft.AspNet.Mvc.ru.5.2.7/lib/net45/ru/*.xml
+*.xml
+*.nupkg
+*.rsp
+*.xdt
+*.exe
+*.ps1
+*.targets
+packages
+fonts
+bin
+Content
+obj

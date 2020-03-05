@@ -1,0 +1,38 @@
+﻿@model CarApplication.Models.IndexViewModel
+@using CarApplication.Helpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Home Page";
+}
+    <a href="/Car/Create">Создать</a>
+    <table class="table">
+        
+        <tr class="header">
+            <td><p>Модель</p></td>
+            <td><p>Цвет</p></td>
+            <td><p>Тип трансмиссии</p></td>
+            <td><p>Тип двигателя</p></td>
+            <td><p>Цена</p></td>
+        </tr>
+
+        @foreach (var item in Model.Cars)
+        {
+            <tr>
+                <td>@item.Model</td>
+                <td>@item.Color</td>
+                <td>@item.TypeTransmission</td>
+                <td>@item.TypeEngine</td>
+                <td>@item.Price</td>
+                <td><p><a href="/Car/Buy/@item.Id">Купить</a></p></td>
+            </tr>
+
+        }
+
+    </table>
+<br />
+<div class="btn-group">
+    @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+</div>
